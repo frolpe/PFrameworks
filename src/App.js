@@ -1,11 +1,13 @@
 // import logo from './logo.svg';
 // import './App.css';
 // import { Component } from 'react';
-import express from 'express'
+import express from 'express';
+import morgan from 'morgan';
 
-const app = express()
-app.listen(3000)
-console.log('Server on port', 3000)
+const app = express();
+app.use(morgan('dev'));
+
+export default app;  //Exportar app después de inicializarlo. 
 
 /** 
 import {Signup} from './signup/signup';
