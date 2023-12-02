@@ -3,7 +3,7 @@ import "./styles.css"
 import logo from "./logo1-removebg-preview.png"
 
 
-export const Signup = () => {
+export const Signin = () => {
     return(
         <div className="card">
             <img src={logo} alt='Logo' />

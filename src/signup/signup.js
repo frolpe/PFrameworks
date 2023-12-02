@@ -77,7 +77,7 @@ export const Signup = () => {
                         </td>
                         <td>
                             <p>Email address</p>
-                            <input className='control' type='email'></input>
+                            <input className='control' type='mail'></input>
                         </td>
                     </tr>
 
