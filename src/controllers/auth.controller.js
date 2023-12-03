@@ -1,5 +1,6 @@
 import User from '../models/user.model.js';
-
+import bcrypt from 'bcryptjs/dist/bcrypt.js';
+import {createAccessToken} from '../libs/jwt.js';
 
 export const register = async (req, res) => {
     const {username, email, password, names, lastname, age} = req.body;
@@ -8,9 +9,12 @@ export const register = async (req, res) => {
     const idTheme = 1;
 
     try {
+
+        const passHash = await bcrypt.hash(password, 10); //Creación de un hash para encriptar la contraseña.
+
         const newUser = new User({
             username, 
-            password, 
+            password: passHash, 
             names,
             lastname,
             email, 
@@ -19,12 +23,22 @@ export const register = async (req, res) => {
         });
     
         const userSaved = await newUser.save();
-        res.json(userSaved);
+
+        //Crear el token con la función importada al inicio y creada en jwt.js
+        const token = await createAccessToken({id: userSaved._id});
+
+        //Devolver al front la cookie con el token
+        res.cookie('token', token); //Guardará el token en la cookie.
+        //Devolver al front el json con los datos a utilizar
+        res.json({
+            id: userSaved._id, 
+            username: userSaved.username, 
+            email: email
+        });
         
         console.log(newUser);
     } catch (error) {
-        console.log(error);
-        res.status(500).send('Error al registrar usuario');
+        res.status(500).json({message: error.message});
 
     }
     
