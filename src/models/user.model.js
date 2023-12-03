@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     username: {
-        type: String,
+        type: String,   
         required : true,
         trim: true,
         unique: true
@@ -27,15 +27,17 @@ const userSchema = mongoose.Schema({
         unique: true
     }, 
     age: {
-        type: Int16Array,
+        type: Number,
         required: true,
         trim: true
     },
     idTheme: {
-        type: Int16Array,
+        type: Number,
         required: true,
         trim: true
     }
+}, {
+    timestamps: true
 })
 
 export default mongoose.model('User', userSchema)
