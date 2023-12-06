@@ -16,8 +16,6 @@ function LoginPage() {
         signin(data);
     })
 
-
-
     return (
         <div className="flex items-center justify-center h-[calc(100vh-100px)]">
             <div className="bg-zinc-800 max-w-md w-full rounded-md p-10">
