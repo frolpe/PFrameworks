@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { createSkillRequest, getSkillsRequest, deleteSkillRequest } from "../api/skills";
+import { createSkillRequest, getSkillsRequest, deleteSkillRequest, getSkillRequest, updateSkillRequest } from "../api/skills";
 
 const skillContext = createContext();
 
@@ -38,10 +38,24 @@ export function SkillProvider({ children }){
         } catch (error) {
             console.log(error);
         }
-
- 
     }
 
+    const getSkill = async (id) => {
+        try {
+            const res = await getSkillRequest(id);
+            return res.data;        
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const updateSkill = async (id, skill) => {
+        try {
+            await updateSkillRequest(id, skill);    
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return ( 
         <skillContext.Provider 
@@ -50,6 +64,8 @@ export function SkillProvider({ children }){
             createSkill,
             getSkills,
             deleteSkill,
+            getSkill,
+            updateSkill,
         }}>
             {children}
         </skillContext.Provider>
