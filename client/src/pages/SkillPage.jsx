@@ -1,14 +1,27 @@
-import { useAuth } from "../context/AuthContext";
+import { useEffect } from "react";
+import { useSkill } from "../context/SkillsContext";
 
 function SkillPage() {
+    const {getSkills, skills} = useSkill();
 
-    const {user} = useAuth();
-    console.log(user);
+    useEffect(() => {
+        getSkills();
+    }, [])
 
+    if (skills.length == 0) return ( 
+        <h1>No Skills</h1>
+    )
 
     return(
         <div>
-            Skill Page
+            {
+                skills.map(skill => (
+                    <div key={skill._id}>
+                        <h1>{skill.names}</h1>
+                        <p>{skill.description}</p>
+                    </div>
+                ))
+            }
         </div>
     )
 }
