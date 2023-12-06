@@ -1,13 +1,16 @@
 import {useForm} from 'react-hook-form';
 import { useSkill } from '../context/SkillsContext';
+import { useNavigate } from 'react-router-dom';
 
 function SkillFormPage() {
 
     const {register, handleSubmit} = useForm();
     const {createSkill} = useSkill();
+    const navigate = useNavigate();
 
     const onSubmit = handleSubmit((data) => {
         createSkill(data);
+        navigate('/skills');
     })
 
     return(

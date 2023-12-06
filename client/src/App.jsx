@@ -8,12 +8,14 @@ import { AuthProvider } from './context/AuthContext';
 import { SkillProvider } from './context/SkillsContext';
 import HomePage from './pages/HomePage';
 import ProtectedRoute from './ProtectedRoute';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <AuthProvider>
       <SkillProvider>
         <BrowserRouter>
+        <Navbar/>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/login' element={<LoginPage />} />
