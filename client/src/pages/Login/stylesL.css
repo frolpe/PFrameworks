@@ -12,11 +12,9 @@ html, .wrapper {
 body {
     height: 100%;
     display: felx;
-    /* place-items: center; */
-    margin: 0;
+    margin: 10px;
     background: #727E87;
     color: #000000;
-    animation: rotate 5s infinite alternate linear;
 }
   
 button {
@@ -26,6 +24,7 @@ button {
 }
 
 .aline{
+    animation: rotate 5s infinite alternate linear;
     display: flex;
     justify-content: center;
 }
