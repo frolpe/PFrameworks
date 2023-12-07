@@ -6,32 +6,6 @@ import "../SignIn/stylesR.css";
 import logo from "../Login/logo1-removebg-preview.png";
 
 function RegisterPage(){
-    const useDebounce = (value, delay) => {
-        const [debounced, setDebounced] = useState(value);
-        
-        useEffect(() => {
-            const handler = setTimeout(() => {
-                setDebounced(value)
-            }, delay);
-            return () => clearTimeout(handler);
-        }, [value, delay]);
-    
-        return debounced;
-    };
-    const Username = ({isValid, isLoading, handleChange}) => {
-        return(
-            <>
-            <div className='username'>
-                <input onChange={handleChange} className='control'/>
-                <div className= {`spinner ${isLoading ? "loading" : ""}`}></div>
-            </div>
-            <div className={`validation ${!isValid ? "invalid" : ""}`}>
-                Username already taken
-            </div>
-            </>
-        );
-    };
-
     const {register, handleSubmit, formState: {
         errors
     }} = useForm();
@@ -50,7 +24,7 @@ function RegisterPage(){
 
     return(
         <div className="card">
-            <img src={logo} alt='Logo' />
+            {/* <img src={logo} alt='Logo' /> */}
             {
                 registerError.map((error, i) => (
                     <div style={{ color: 'red' , fontSize: 'small'}} key={i}>
@@ -64,11 +38,17 @@ function RegisterPage(){
                     <tr>
                         <td>
                             <p>Name</p>
-                            <input className='control' type='text'></input>
+                            <input className='control' type='text'  {... register('names', {required: true})} ></input>
+                            {
+                                errors.names && <p style={{ color: 'red' , fontSize: 'small'}}>Name is required</p>
+                            }
                         </td>
                         <td>
                             <p>Last name</p>
-                            <input className='control' type='text'></input>
+                            <input className='control' type='text' {... register('lastname', {required: true})} ></input>
+                            {
+                                errors.lastname && <p style={{ color: 'red' , fontSize: 'small'}}>Lastname is required</p>
+                            }
                         </td>
                     </tr>
 
@@ -77,31 +57,41 @@ function RegisterPage(){
                             <p>Username</p>
                             <input type="text"  {... register('username', {required: true})} placeholder='Username' />
                             {
-                                errors.username && <p className='text-red-500'>Username is required</p>
+                                errors.username && <p style={{ color: 'red' , fontSize: 'small'}}>Username is required</p>
                             }
                         </td>
                         <td>
                             <p>Email address</p>
-                            <input className='control' type='mail'></input>
+                            <input className='control' type='mail' {... register('email', {required: true})} ></input>
+                            {
+                                errors.email && <p style={{ color: 'red' , fontSize: 'small'}}>Email is required</p>
+                            }
                         </td>
                     </tr>
 
                     <tr>
                         <td>
                             <p>Password</p>
-                            <input className='control' type='password'></input>
+                            <input className='control' type='password' {... register('password', {required: true})} ></input>
+                            {
+                                errors.password && <p style={{ color: 'red' , fontSize: 'small'}}>Password is required</p>
+                            }
                         </td>
                         <td>
                             <p>Confirm your Password</p>
-                            <input className='control' type='password'></input>
+                            <input className='control' type='password' {... register('password', {required: true})} ></input>
+                            {
+                                errors.password && <p style={{ color: 'red' , fontSize: 'small'}}>Password is required</p>
+                            }
                         </td>
                     </tr>
                 </table>
                 
-                <button disabled={!isValid} className="control" type="button" >
+                <button disabled={!isValid} className="control" type='submit' >
                     <a href=''>Sign up</a>
                 </button>
             </form>
+            <p style={{'padding-top': '10px', 'font-size': '14px'}}>Already have an account? <Link to="/login">Sign in</Link></p>
         </div>
     )
 };
