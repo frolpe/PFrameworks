@@ -4,14 +4,15 @@
     /* border: #101111 1px solid; */
 }
   
-html, body, .wrapper {
+html, .wrapper {
     height: 100%;
     text-decoration: none;
 }
   
 body {
-    display: grid;
-    place-items: center;
+    height: 100%;
+    display: felx;
+    /* place-items: center; */
     margin: 0;
     background: #727E87;
     color: #000000;
@@ -23,8 +24,15 @@ button {
     border: 0;
     cursor: pointer;
 }
-  
+
+.aline{
+    display: flex;
+    justify-content: center;
+}
+
 .card {
+    /* display: flex; */
+    justify-content: center;
     width: 400px;
     padding: 60px 30px 32px;
     border-radius: 1.25rem;

@@ -24,7 +24,7 @@ function RegisterPage(){
 
     return(
         <div className="card">
-            {/* <img src={logo} alt='Logo' /> */}
+            <img src={logo} alt='Logo' />
             {
                 registerError.map((error, i) => (
                     <div style={{ color: 'red' , fontSize: 'small'}} key={i}>
@@ -55,7 +55,7 @@ function RegisterPage(){
                     <tr>
                         <td>
                             <p>Username</p>
-                            <input type="text"  {... register('username', {required: true})} placeholder='Username' />
+                            <input className='control' type="text"  {... register('username', {required: true})}></input>
                             {
                                 errors.username && <p style={{ color: 'red' , fontSize: 'small'}}>Username is required</p>
                             }
@@ -87,7 +87,7 @@ function RegisterPage(){
                     </tr>
                 </table>
                 
-                <button disabled={!isValid} className="control" type='submit' >
+                <button className="control" type='submit' >
                     <a href=''>Sign up</a>
                 </button>
             </form>
