@@ -3,12 +3,7 @@
     font-family: 'Montserrat', sans-serif;
     /* border: #101111 1px solid; */
 }
-  
-html, .wrapper {
-    height: 100%;
-    text-decoration: none;
-}
-  
+
 body {
     height: 100%;
     display: felx;
@@ -16,21 +11,14 @@ body {
     background: #727E87;
     color: #000000;
 }
-  
-button {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-}
 
-.aline{
+.alineLogin{
     animation: rotate 5s infinite alternate linear;
     display: flex;
     justify-content: center;
 }
 
-.card {
-    /* display: flex; */
+.cardLogin {
     justify-content: center;
     width: 400px;
     padding: 60px 30px 32px;
@@ -40,30 +28,28 @@ button {
     transition: 0.4s;
 }
   
-.card h2 {
+.cardLogin h2 {
     font-size: 36px;
     margin: 0 0 30px;
 }
-.card p {
+.cardLogin p {
     text-align: left;
     padding: 0;
     margin: 0;
     margin-left: 20px;
 }
   
-.card img {
+.cardLogin img {
     width: 120px;
     padding: 5px;
     margin-bottom: 10px;
 }
   
-.form {
+.formLogin {
     width: 100%;
-    /* margin: 0; */
-    /* display: grid; */
 }
 
-.control {
+.controlLogin {
     outline: none;
     width: 90%;
     height: 40px;
@@ -78,7 +64,7 @@ button {
     transition: 0.4s;
 }
   
-button.control {
+button.controlLogin {
     cursor: pointer;
     width: 30%;
     padding: 5px;
@@ -91,10 +77,10 @@ button.control {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
-button.control:hover {
+button.controlLogin:hover {
     box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.3);
 }
-  
-button.control:disabled {
+
+button.controlLogin:disabled {
     opacity: 0.25;
 }
