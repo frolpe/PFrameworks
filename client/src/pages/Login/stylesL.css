@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* border: #101111 1px solid; */
+}
+  
+html, .wrapper {
+    height: 100%;
+    text-decoration: none;
+}
+  
+body {
+    height: 100%;
+    display: felx;
+    /* place-items: center; */
+    margin: 0;
+    background: #727E87;
+    color: #000000;
+    animation: rotate 5s infinite alternate linear;
+}
+  
+button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.aline{
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    /* display: flex; */
+    justify-content: center;
+    width: 400px;
+    padding: 60px 30px 32px;
+    border-radius: 1.25rem;
+    background: #DDDDDD;
+    text-align: center;
+    transition: 0.4s;
+}
+  
+.card h2 {
+    font-size: 36px;
+    margin: 0 0 30px;
+}
+.card p {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+}
+  
+.card img {
+    width: 120px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+  
+.form {
+    width: 100%;
+    /* margin: 0; */
+    /* display: grid; */
+}
+
+.control {
+    outline: none;
+    width: 90%;
+    height: 40px;
+    padding: 0 16px;
+    border: 0;
+    background: #b1b2b3;
+    border-radius: 20px;
+    margin: 8px 0;
+    font-family: inherit;
+    text-align: left;
+    font-size: 15px;
+    transition: 0.4s;
+}
+  
+button.control {
+    cursor: pointer;
+    width: 30%;
+    padding: 5px;
+    background: #c0c0c0;
+    color: #000000;
+    border: 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+button.control:hover {
+    box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.3);
+}
+  
+button.control:disabled {
+    opacity: 0.25;
+}
