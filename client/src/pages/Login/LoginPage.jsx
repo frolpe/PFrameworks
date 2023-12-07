@@ -25,8 +25,8 @@ function LoginPage() {
     }, [isAuthenticated])
 
     return (
-        <div className="aline">
-            <div className="card">
+        <div className="alineLogin">
+            <div className="cardLogin">
                 <img src={logo} alt='Logo' />
                 {
                     Array.isArray(signinErrors) ?
@@ -39,23 +39,23 @@ function LoginPage() {
                             {signinErrors}
                         </div>
                 }
-                <h1>Sign in</h1>
-                <form onSubmit={onSubmit} className="form">
+                <h1>Sign In</h1>
+                <form onSubmit={onSubmit} className="formLogin">
                     <p>Username or email address</p>
-                    <input type='email'{...register('email', { required: true })} className="control" placeholder="example@mail.com"></input>
+                    <input type='email'{...register('email', { required: true })} className="controlLogin" placeholder="example@mail.com"></input>
                     {
                         errors.email && <p style={{ color: 'red', fontSize: 'small' }}>Email is required</p>
                     }
                     <p>Password</p>
-                    <input className='control' type='password' {...register('password', { required: true })} ></input>
+                    <input className='controlLogin' type='password' {...register('password', { required: true })} ></input>
                     {
                         errors.password && <p style={{ color: 'red', fontSize: 'small' }}>Password is required</p>
                     }
-                    <button className="control" type="submit">
+                    <button className="controlLogin" type="submit">
                         <a>Sign in</a>
                     </button>
                 </form>
-                <p style={{ 'padding-top': '10px', 'font-size': '14px' }}> Don't have an account? <Link to="/register">Sign Up</Link></p>
+                <p style={{'padding-top': '10px', 'font-size': '14px'}}> Don't have an account? <Link to="/register">Sign Up</Link></p>
 
             </div>
         </div>

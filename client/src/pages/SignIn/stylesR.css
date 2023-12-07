@@ -1,30 +1,17 @@
 * {
-    color: #000000;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    /* border: #101111 1px solid; */
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  /* border: #101111 1px solid; */
 }
-  
-html, body, .wrapper {
-    height: 100%;
-    /* width: 70%; */
-    text-decoration: none;
-}
-  
+
 body {
-    display: grid;
-    place-items: center;
-    margin: 0;
-    background: #727E87;
-    color: #000000;
-    animation: rotate 5s infinite alternate linear;
+  height: 100%;
+  display: felx;
+  margin: 10px;
+  background: #727E87;
+  color: #000000;
 }
-  
-button {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-}
+
 table {
   width: 100%;
 }
