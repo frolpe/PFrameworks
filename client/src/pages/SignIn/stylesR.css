@@ -1,21 +1,3 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  /* border: #101111 1px solid; */
-}
-
-body {
-  height: 100%;
-  display: felx;
-  margin: 10px;
-  background: #727E87;
-  color: #000000;
-}
-
-table {
-  width: 100%;
-}
-
 .alineRegister {
   animation: rotate 5s infinite alternate linear;
   display: flex;
