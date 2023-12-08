@@ -1,0 +1,41 @@
+.alineProfile {
+    display: flex;
+    align-items: flex-start;   /* Alinea los elementos en la parte superior del contenedor */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+}
+
+.profile {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    background-color: #e3e5d7;
+    border-radius: 20px;
+    margin: 2.5%;
+    width: 40%;
+    padding: 10px;
+}
+
+.cardP {
+    font-size: small;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    background-color: #e3e5d7;
+    border-radius: 20px;
+    width: 65%; 
+    display: flex;
+    margin: 2.5%;
+    padding: 2%;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.cardP>div {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.cardS{
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    background-color: #f6eddc;
+    padding: 5% 2%;
+    text-align: center;
+    border-radius: 20px;
+}
+/* Estilos adicionales según tus necesidades */
