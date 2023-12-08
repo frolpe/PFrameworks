@@ -1,32 +1,35 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import logo from "../pages/Login/logo1-removebg-preview.png";
 
 
 function Navbar() {
 
-    const {isAuthenticated, logout} = useAuth();
+    const { isAuthenticated, logout } = useAuth();
 
     return (
-        <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10 rounded-lg">
-            <Link className="text-2xl font-bold" to={'/'}>Home</Link>
-            <ul className="flex gap-x-2">
-                <li>
-                    {isAuthenticated ? (
-                        <>
-                            <Link to={'/profile'}>Portafolio</Link>
-                            <Link to={'/'} onClick={() => {
-                                logout();
-                            }}>Logout</Link>
-                        </>
+        <div className="headerNav">
+            <div className="LogoNav">
+                <Link to={'/'}><img src={logo} /></Link>
+            </div>
+            <nav>
+                <ul className="navLinks">
+                    <li>
+                        {isAuthenticated ? (
+                            <>
+                                <Link to={'/skills'} className="navLinks">Portafolio</Link>
+                                <Link to={'/'} className="navLinks" onClick={() => { logout(); }}>Logout</Link>
+                            </>
                         ) : (
-                        <>
-                            <Link to={'/login'}>Login</Link>
-                            <Link to={'/register'}>Register</Link>
-                        </>
-                    )}
-                </li>
-            </ul>
-        </nav>
+                            <>
+                                <Link to={'/login'} className="navLinks">Login</Link>
+                                <Link to={'/register'} className="navLinks">Register</Link>
+                            </>
+                        )}
+                    </li>
+                </ul>
+            </nav>
+        </div>
     )
 }
 

@@ -1,3 +1,63 @@
 /* @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities'; */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* border: #101111 1px solid; */
+}
+
+body {
+    height: 100%;
+    display: felx;
+    margin: 0;
+    background: #727E87;
+    color: #000000;
+}
+
+table {
+    width: 100%;
+}
+
+
+.headerNav{
+    margin-bottom: 2%;
+    background-color: #e3e5d7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 2.5%;
+    border-radius: 0 0 30px 30px;
+}
+.headerNav .LogoNav{
+    margin-right: auto;
+    cursor: pointer;
+}
+.headerNav .LogoNav img{
+    margin: 5px;
+    height: 70px;
+    width: auto;
+    transition: all 0.4s;
+}
+.headerNav.headerNav img:hover{
+    transform: scale(1.1);
+}
+.headerNav .navLinks{
+    list-style: none;
+}
+.headerNav .navLinks li{
+    display: inline-block;
+    padding: 20px;
+}
+.headerNav .navLinks Link{
+    font-size: 700;
+    color: #000000;
+    text-decoration: none;
+}
+
+.headerNav .navLinks li Link:hover{
+    color: #727E87;
+}
+
