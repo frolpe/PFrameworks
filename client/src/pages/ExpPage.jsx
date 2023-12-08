@@ -12,7 +12,7 @@ function ExpPage() {
 
     if (exps.length == 0) return (
         <div>
-            <h1>No Exps</h1>
+            <h1>No Experiences</h1>
             <Link to='/add-exp'>Agregar</Link>
         </div>
     )
