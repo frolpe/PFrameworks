@@ -9,6 +9,7 @@ import ExpCard2 from "../../components/ExpCard2";
 import { useStudy } from "../../context/StudyContext";
 import StudyCard2 from "../../components/StudyCard2";
 import { useUser } from "../../context/userContext";
+import perfil from "./avatar_male_man_people_person_profile_user_icon_123199.png";
 import "../Profile/stylesProfile.css";
 
 function ProfilePage() {
@@ -130,7 +131,8 @@ function ProfilePage() {
     return (
         <div className="alineProfile">
             <div className="profile">
-                <p>Profile Page</p>
+                <img src={perfil} alt='Perfil'/>
+                <h2>Profile</h2>
                 {userContent}
             </div>
             <div className="cardP">
