@@ -109,7 +109,7 @@ function ProfilePage() {
     return (
         <div className="alineProfile">
             <div className="profile">
-                <h1>Profile Page</h1>
+                <p>Profile Page</p>
             </div>
             <div className="cardP">
                 <div className="cardS">

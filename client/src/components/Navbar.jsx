@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import logo from "../pages/Login/logo1-removebg-preview.png";
+import perfil from "../avatar_male_man_people_person_profile_user_icon_123199.png";
 
 
 function Navbar() {
@@ -17,8 +18,9 @@ function Navbar() {
                     <li style={{'display': 'inline-block', 'padding': '20px'}}>
                         {isAuthenticated ? (
                             <>
-                                <Link to={'/skills'} style={{'display': 'inline-block', 'padding': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Portafolio</Link>
-                                <Link to={'/skills'} style={{'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}} onClick={() => { logout(); }}>Logout</Link>
+                                <Link to={'/skills'} style={{'display': 'inline-block', 'padding-right': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Portafolio</Link>
+                                <Link to={'/skills'} style={{'padding-right': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}} onClick={() => { logout(); }}>Logout</Link>
+                                <Link to={'/profile'} style={{'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}><img style={{'height': '40px'}} src={perfil} /></Link>
                             </>
                         ) : (
                             <>

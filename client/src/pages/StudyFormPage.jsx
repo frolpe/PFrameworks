@@ -33,7 +33,7 @@ function StudyFormPage() {
     })
 
     return (
-        <div>
+        <div className='ModalStudies'>
             <form onSubmit={onSubmit}>
                 <input type="text" placeholder="Name" {...register("names")} />
                 <button>Save</button>
