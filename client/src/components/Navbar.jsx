@@ -18,7 +18,7 @@ function Navbar() {
                     <li style={{'display': 'inline-block', 'padding': '20px'}}>
                         {isAuthenticated ? (
                             <>
-                                <Link to={'/skills'} style={{'display': 'inline-block', 'padding-right': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Portafolio</Link>
+                                <Link to={'/portafolio'} style={{'display': 'inline-block', 'padding-right': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Portafolio</Link>
                                 <Link to={'/skills'} style={{'padding-right': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}} onClick={() => { logout(); }}>Logout</Link>
                                 <Link to={'/profile'} style={{'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}><img style={{'height': '40px'}} src={perfil} /></Link>
                             </>
