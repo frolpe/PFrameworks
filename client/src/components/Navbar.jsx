@@ -14,16 +14,16 @@ function Navbar() {
             </div>
             <nav>
                 <ul className="navLinks">
-                    <li>
+                    <li style={{'display': 'inline-block', 'padding': '20px'}}>
                         {isAuthenticated ? (
                             <>
-                                <Link to={'/skills'} className="navLinks">Portafolio</Link>
-                                <Link to={'/'} className="navLinks" onClick={() => { logout(); }}>Logout</Link>
+                                <Link to={'/skills'} style={{'display': 'inline-block', 'padding': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Portafolio</Link>
+                                <Link to={'/skills'} style={{'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}} onClick={() => { logout(); }}>Logout</Link>
                             </>
                         ) : (
                             <>
-                                <Link to={'/login'} className="navLinks">Login</Link>
-                                <Link to={'/register'} className="navLinks">Register</Link>
+                                <Link to={'/login'} style={{'display': 'inline-block', 'padding': '20px','font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Login</Link>
+                                <Link to={'/register'} style={{'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Register</Link>
                             </>
                         )}
                     </li>
