@@ -15,6 +15,12 @@
     font-size:larger;
 }
 
+.profile img{
+    width: 120px;
+    padding: 50px 0 0 0;
+    margin-bottom: 10px;
+}
+
 .cardP {
     font-size: small;
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);

@@ -28,7 +28,7 @@ function StudyPage() {
                     ))
                 }
                 <div className="btnAgregar">
-                    <Link style={{ 'text-decoration': 'none' }} to='/add-study'>Agregar</Link>
+                    <Link style={{'text-decoration': 'none' }} to='/add-study'>Agregar</Link>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ import ExpCard2 from "../../components/ExpCard2";
 import { useStudy } from "../../context/StudyContext";
 import StudyCard2 from "../../components/StudyCard2";
 import { useUser } from "../../context/userContext";
-import perfil from "./avatar_male_man_people_person_profile_user_icon_123199.png";
+import perfil from "./Credencial.png";
 import "../Profile/stylesProfile.css";
 
 function ProfilePage() {
@@ -45,8 +45,8 @@ function ProfilePage() {
     else {
         userContent = (
             <div>
-                <h2>Nombre: {users.names} {users.lastname}</h2>
-                <p>Email: {users.email}</p>
+                <h2>{users.names} {users.lastname}</h2>
+                <p>{users.email}</p>
                 <p>Edad: {users.age}</p>
             </div>
         )
