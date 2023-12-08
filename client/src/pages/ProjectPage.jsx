@@ -15,7 +15,6 @@ function ProjectPage() {
             <h1>No Projects</h1>
             <Link to='/add-project'>Agregar</Link>
         </div>
-
     )
 
     return (

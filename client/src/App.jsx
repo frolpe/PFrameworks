@@ -15,9 +15,11 @@ import { ExpProvider } from './context/ExpContext';
 import StudyPage from './pages/StudyPage';
 import StudyFormPage from './pages/StudyFormPage';
 import { StudyProvider } from './context/StudyContext';
+import { UserProvider } from './context/userContext';
 import HomePage from './pages/HomePage';
 import ProtectedRoute from './ProtectedRoute';
 import Navbar from './components/Navbar';
+import PortafolioPage from './pages/PortafolioPage';
 
 function App() {
   return (
@@ -26,33 +28,38 @@ function App() {
         <ProjectProvider>
           <ExpProvider>
             <StudyProvider>
-              <BrowserRouter>
-                <Navbar />
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  <Route path='/login' element={<LoginPage />} />
-                  <Route path='/register' element={<RegisterPage />} />
+              <UserProvider>
+                <BrowserRouter>
+                  <Navbar />
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    <Route path='/login' element={<LoginPage />} />
+                    <Route path='/register' element={<RegisterPage />} />
 
-                  <Route element={<ProtectedRoute />}>
-                    <Route path='/skills' element={<SkillPage />} />
-                    <Route path='/add-skill' element={<SkillFormPage />} />
-                    <Route path='/skills/:id' element={<SkillFormPage />} />
-                    <Route path='/profile' element={<ProfilePage />} />
+                    <Route element={<ProtectedRoute />}>
+                      <Route path='/skills' element={<SkillPage />} />
+                      <Route path='/add-skill' element={<SkillFormPage />} />
+                      <Route path='/skills/:id' element={<SkillFormPage />} />
+                      <Route path='/profile' element={<ProfilePage />} />
 
-                    <Route path='/projects' element={<ProjectPage />} />
-                    <Route path='/add-project' element={<ProjectFormPage />} />
-                    <Route path='/projects/:id' element={<ProjectFormPage />} />
+                      <Route path='/portafolio' element={<PortafolioPage />} />
 
-                    <Route path='/exps' element={<ExpPage />} />
-                    <Route path='/add-exp' element={<ExpFormPage />} />
-                    <Route path='/exps/:id' element={<ExpFormPage />} />
+                      <Route path='/projects' element={<ProjectPage />} />
+                      <Route path='/add-project' element={<ProjectFormPage />} />
+                      <Route path='/projects/:id' element={<ProjectFormPage />} />
 
-                    <Route path='/studies' element={<StudyPage />} />
-                    <Route path='/add-study' element={<StudyFormPage />} />
-                    <Route path='/studies/:id' element={<StudyFormPage />} />
-                  </Route>
-                </Routes>
-              </BrowserRouter>
+                      <Route path='/exps' element={<ExpPage />} />
+                      <Route path='/add-exp' element={<ExpFormPage />} />
+                      <Route path='/exps/:id' element={<ExpFormPage />} />
+
+                      <Route path='/studies' element={<StudyPage />} />
+                      <Route path='/add-study' element={<StudyFormPage />} />
+                      <Route path='/studies/:id' element={<StudyFormPage />} />
+                    </Route>
+                  </Routes>
+                </BrowserRouter>
+              </UserProvider>
+
             </StudyProvider>
           </ExpProvider>
         </ProjectProvider>

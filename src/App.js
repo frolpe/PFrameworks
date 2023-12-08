@@ -11,6 +11,7 @@ import skillRoutes from './routes/skills.routes.js';
 import projectRoutes from './routes/projects.routes.js';
 import expRoutes from './routes/experience.routes.js';
 import studyRoutes from './routes/study.routes.js';
+import userRoutes from './routes/user.routes.js'
  
 const app = express();
 
@@ -27,6 +28,9 @@ app.use("/api", skillRoutes);
 app.use("/api", projectRoutes);
 app.use("/api", expRoutes);
 app.use("/api", studyRoutes);
+app.use("/api", userRoutes);
+
+
 
 export   default app;  //Exportar app después de inicializarlo. 
 
