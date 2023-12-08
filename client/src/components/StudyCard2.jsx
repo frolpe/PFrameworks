@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function StudyCard2({study}) {
     return (
-        <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
-            <h1 className="text-white">{study.names}</h1>
+        <div>
+            <p style={{'fontSize': '20px', 'margin': '1px'}}>{study.names}</p>
+            <hr style={{ flex: '1', margin: '5px 90px', borderColor: '#000000' }} />
         </div>
     )
-
 }
 
 export default StudyCard2;

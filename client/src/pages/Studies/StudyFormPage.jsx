@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { useStudy } from '../context/StudyContext'
+import { useStudy } from '../../context/StudyContext'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
