@@ -13,7 +13,7 @@ function Navbar() {
                 <li>
                     {isAuthenticated ? (
                         <>
-                            <Link to={'/skills'}>Portafolio</Link>
+                            <Link to={'/profile'}>Portafolio</Link>
                             <Link to={'/'} onClick={() => {
                                 logout();
                             }}>Logout</Link>
