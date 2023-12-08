@@ -4,7 +4,7 @@ export const createExperienceSchema = z.object({
     names: z.string({
         required_error: 'Name is required'
     }),
-    positon: z.string({
+    position: z.string({
         required_error: 'Position must be a String'
     }), 
     time: z.string({

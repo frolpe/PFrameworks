@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 function ProjectFormPage() {
 
     const { register, handleSubmit, setValue } = useForm();
-    const {createProject, getProject, updateProject} = useProject;
+    const {createProject, getProject, updateProject} = useProject();
     const navigate = useNavigate();
     const params = useParams();
 

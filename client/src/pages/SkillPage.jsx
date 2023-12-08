@@ -11,7 +11,10 @@ function SkillPage() {
     }, [])
 
     if (skills.length == 0) return (
-        <h1>No Skills</h1>
+        <div>
+            <h1>No Skills</h1>
+            <Link to='/add-skill'>Agregar</Link>
+        </div>
     )
 
     return (

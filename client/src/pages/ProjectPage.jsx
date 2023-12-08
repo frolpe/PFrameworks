@@ -11,19 +11,23 @@ function ProjectPage() {
     }, [])
 
     if (projects.length == 0) return (
-        <h1>No Projects</h1>
+        <div>
+            <h1>No Projects</h1>
+            <Link to='/add-project'>Agregar</Link>
+        </div>
+
     )
 
     return (
         <div>
             {
-                projects.map(project => (                    
-                    <ProjectCard project={project} key={project._id}/>
+                projects.map(project => (
+                    <ProjectCard project={project} key={project._id} />
                 ))
             }
             <Link to='/add-project'>Agregar</Link>
         </div>
     )
-}   
+}
 
 export default ProjectPage;

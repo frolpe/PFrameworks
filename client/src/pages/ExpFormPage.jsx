@@ -40,7 +40,7 @@ function ExpFormPage() {
             <form onSubmit={onSubmit}>
                 <input type="text" placeholder="Name" {...register("names")} />
                 <input type="text" placeholder="Position" {...register("position")} />
-                <input type="text" placeholder="Time" {...register("position")} />
+                <input type="text" placeholder="Time" {...register("time")} />
                 <textarea rows="3" placeholder="Description" {...register("description")}></textarea>
                 <button>Save</button>
             </form>

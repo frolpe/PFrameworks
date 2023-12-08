@@ -6,7 +6,7 @@ const experienceSchema = new mongoose.Schema({
         type: String, 
         required: true,
     },
-    positon: {
+    position: {
         type: String,
         requierd: true
     },
