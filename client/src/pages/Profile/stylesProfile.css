@@ -1,7 +1,7 @@
 .alineProfile {
     display: flex;
-    align-items: flex-start;   /* Alinea los elementos en la parte superior del contenedor */
-    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    align-items: flex-start;   
+    justify-content: space-between;
 }
 
 .profile {
@@ -38,4 +38,3 @@
     text-align: center;
     border-radius: 20px;
 }
-/* Estilos adicionales según tus necesidades */
