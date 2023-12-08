@@ -79,10 +79,10 @@ function RegisterPage() {
                                 }
                             </td>
                             <td>
-                                <p>Confirm your Password</p>
-                                <input className='controlRegister' type='password' {...register('password', { required: true })} ></input>
+                                <p>Age</p>
+                                <input className='controlRegister' type='number' {...register('age', { required: true })}></input>
                                 {
-                                    errors.password && <p style={{ color: 'red', fontSize: 'small' }}>Password is required</p>
+                                    errors.password && <p style={{ color: 'red', fontSize: 'small' }}>Age is Required</p>
                                 }
                             </td>
                         </tr>
