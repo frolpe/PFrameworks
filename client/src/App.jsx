@@ -16,7 +16,6 @@ import StudyPage from './pages/Studies/StudyPage';
 import StudyFormPage from './pages/Studies/StudyFormPage';
 import { StudyProvider } from './context/StudyContext';
 import { UserProvider } from './context/userContext';
-import HomePage from './pages/HomePage';
 import ProtectedRoute from './ProtectedRoute';
 import Navbar from './components/Navbar';
 import PortafolioPage from './pages/PortafolioPage';
@@ -32,10 +31,8 @@ function App() {
                 <BrowserRouter>
                   <Navbar />
                   <Routes>
-                    <Route path='/' element={<HomePage />} />
                     <Route path='/login' element={<LoginPage />} />
                     <Route path='/register' element={<RegisterPage />} />
-
                     <Route element={<ProtectedRoute />}>
                       <Route path='/skills' element={<SkillPage />} />
                       <Route path='/add-skill' element={<SkillFormPage />} />

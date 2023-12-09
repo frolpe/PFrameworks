@@ -1,0 +1,41 @@
+.portfolio-page-body {
+    background-color: #1F1C3F;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0;
+    color: #e3e5d7;
+}
+
+.profile-section {
+    flex: 0 0 25%;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.card-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.custom-card {
+    background-color: #3C3D50;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all ;
+}
+.custom-card:hover{
+    box-shadow: 0 2px 4px rgba(228, 226, 226, 0.7);
+}
+
+.card-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

@@ -11,21 +11,30 @@ function Navbar() {
     return (
         <div className="headerNav">
             <div className="LogoNav">
-                <Link to={'/'}><img src={logo} /></Link>
+                {isAuthenticated ? (
+                    <>
+                        <Link to={'/portafolio'}><img src={logo} /></Link>
+                    </>
+                ) : (
+                    <>
+                        <Link to={'/login'}><img src={logo} /></Link>
+
+                    </>
+                )}
             </div>
             <nav>
                 <ul className="navLinks">
-                    <li style={{'display': 'inline-block', 'padding': '20px'}}>
+                    <li style={{ 'display': 'inline-block', 'padding': '20px' }}>
                         {isAuthenticated ? (
                             <>
-                                <Link to={'/portafolio'} style={{'display': 'inline-block', 'padding-right': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Portafolio</Link>
-                                <Link to={'/skills'} style={{'padding-right': '20px' ,'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}} onClick={() => { logout(); }}>Logout</Link>
-                                <Link to={'/profile'} style={{'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}><img style={{'height': '40px'}} src={perfil} /></Link>
+                                <Link to={'/portafolio'} style={{ 'display': 'inline-block', 'padding-right': '20px', 'font-size': '700', 'color': '#000000', 'text-decoration': 'none' }}>Portafolio</Link>
+                                <Link to={'/skills'} style={{ 'padding-right': '20px', 'font-size': '700', 'color': '#000000', 'text-decoration': 'none' }} onClick={() => { logout(); }}>Logout</Link>
+                                <Link to={'/profile'} style={{ 'font-size': '700', 'color': '#000000', 'text-decoration': 'none' }}><img style={{ 'height': '40px' }} src={perfil} /></Link>
                             </>
                         ) : (
                             <>
-                                <Link to={'/login'} style={{'display': 'inline-block', 'padding': '20px','font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Login</Link>
-                                <Link to={'/register'} style={{'font-size': '700', 'color': '#000000', 'text-decoration': 'none'}}>Register</Link>
+                                <Link to={'/login'} style={{ 'display': 'inline-block', 'padding': '20px', 'font-size': '700', 'color': '#000000', 'text-decoration': 'none' }}>Login</Link>
+                                <Link to={'/register'} style={{ 'font-size': '700', 'color': '#000000', 'text-decoration': 'none' }}>Register</Link>
                             </>
                         )}
                     </li>

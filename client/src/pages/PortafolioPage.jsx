@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import { useSkill } from "../context/SkillsContext";
-import SkillCard2 from "../components/skillCard2";
+import SkillCard2 from "../components/skillCardP";
 import { useProject } from "../context/ProjectsContext";
-import ProjectCard2 from "../components/projectCard2";
+import ProjectCard2 from "../components/projectCardP";
 import { useEffect } from "react";
 import { useExp } from "../context/ExpContext";
-import ExpCard2 from "../components/ExpCard2";
+import ExpCard2 from "../components/ExpCardP";
 import { useStudy } from "../context/StudyContext";
-import StudyCard2 from "../components/StudyCard2";
+import StudyCard2 from "../components/StudyCardP";
 import { useUser } from "../context/userContext";
-//import "../Profile/stylesProfile.css";
+import "./stylesPortafolio.css";
 
 function PortafolioPage() {
 
@@ -26,11 +26,15 @@ function PortafolioPage() {
     let userContent = null;
 
     useEffect(() => {
+        document.body.classList.add("portfolio-page-body");
         getSkills();
         getProjects();
         getExps();
         getStudies();
         getUsers();
+        return () => {
+            document.body.classList.remove("portfolio-page-body");
+        };
     }, [])
 
     //console.log(users);
@@ -44,7 +48,7 @@ function PortafolioPage() {
     else {
         userContent = (
             <div>
-                <h2>Nombre: {users.names} {users.lastname}</h2>
+                <h2>{users.names} {users.lastname}</h2>
                 <p>Email: {users.email}</p>
                 <p>Edad: {users.age}</p>
             </div>
@@ -128,27 +132,31 @@ function PortafolioPage() {
     }
 
     return (
-        <div className="alineProfile">
-            <div className="profile">
-                <p>Profile Page</p>
+        <div className="portfolio-wrapper">
+            <div className="profile-section">
                 {userContent}
+                <br />
+                <hr />
+                <br />
+                <h2 className="card-heading">Estudios</h2>
+                {studyContent}
             </div>
-            <div className="cardP">
-                <div className="cardS">
-                    {studyContent}
-                </div>
-                <div className="cardS">
+            <div className="card-container">
+                <div className="custom-card">
+                    <h2 className="card-heading">Experiencias</h2>
                     {expContent}
                 </div>
-                <div className="cardS">
+                <div className="custom-card">
+                    <h2 className="card-heading">Proyectos</h2>
                     {projectContent}
                 </div>
-                <div className="cardS">
+                <div className="custom-card">
+                    <h2 className="card-heading">Habilidades</h2>
                     {skillContent}
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default PortafolioPage; 
