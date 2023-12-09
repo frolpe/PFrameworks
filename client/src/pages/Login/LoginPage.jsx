@@ -41,7 +41,7 @@ function LoginPage() {
                 }
                 <h1>Sign In</h1>
                 <form onSubmit={onSubmit} className="formLogin">
-                    <p>Username or email address</p>
+                    <p>Email address</p>
                     <input type='email'{...register('email', { required: true })} className="controlLogin" placeholder="example@mail.com"></input>
                     {
                         errors.email && <p style={{ color: 'red', fontSize: 'small' }}>Email is required</p>
