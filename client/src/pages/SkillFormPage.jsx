@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useSkill } from '../context/SkillsContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import "../pages/Studies/stylesStudies.css"
 
 function SkillFormPage() {
 
@@ -34,12 +35,14 @@ function SkillFormPage() {
     })
 
     return (
-        <div>
-            <form onSubmit={onSubmit}>
-                <input type="text" placeholder="Name" {...register("names")} />
-                <textarea rows="3" placeholder="Description" {...register("description")}></textarea>
-                <button>Save</button>
-            </form>
+        <div className='alineStudies'>
+            <div className='contStudies'>
+                <form onSubmit={onSubmit}>
+                    <input className='inputstudy' type="text" placeholder="Name" {...register("names")} />
+                    <textarea className='inputstudy' rows="3" placeholder="Description" {...register("description")}></textarea><br />
+                    <button className='btnSave'>Save</button>
+                </form>
+            </div>
         </div>
     )
 }

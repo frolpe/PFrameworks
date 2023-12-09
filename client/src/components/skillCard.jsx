@@ -6,16 +6,31 @@ function SkillCard({skill}) {
     const {deleteSkill} = useSkill();
 
     return (
-        <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
-            <h1 className="text-white">{skill.names}</h1>
+        <div>
+            <h1>{skill.names}</h1>
             <p>{skill.description}</p>
-            <button onClick={() => {
+            <button style={{ 'color': '#000000', 'border': '0', 'background': 'transparent', 'cursor': 'pointer', 'transition': 'color 0.3s ease' }}
+            onClick={() => {
                 deleteSkill(skill._id);
+            }}
+            onMouseEnter={(e) => {
+                e.target.style.color = '#fc5f57';
+            }}
+            onMouseLeave={(e) => {
+                e.target.style.color = '#000000';
             }
             }>Delete</button>
-            <button>
-                <Link to={`/skills/${skill._id}`}>Edit</Link>
+            <button style={{ 'border': '0', 'background': 'transparent', 'cursor': 'pointer' }}>
+                <Link style={{ 'color': '#000000', 'transition': 'color 0.3s ease' }} to={`/skills/${skill._id}`}
+                onMouseEnter={(e) => {
+                    e.target.style.color = '#586875';
+                }}
+                onMouseLeave={(e) => {
+                    e.target.style.color = '#000000';
+                }
+                }>Edit</Link>
             </button>
+            <hr />
         </div>
     )
 
