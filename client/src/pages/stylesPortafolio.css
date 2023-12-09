@@ -1,5 +1,5 @@
 .portfolio-page-body {
-    background-color: #0b0b0b;
+    background-color: #1F1C3F;
 }
 
 .portfolio-wrapper {
@@ -8,7 +8,6 @@
     padding: 20px;
     margin: 0;
     color: #e3e5d7;
-    background-color: #0b0b0b;
 }
 
 .profile-section {
@@ -25,7 +24,7 @@
 }
 
 .custom-card {
-    background-color: #2d2d2d;
+    background-color: #3C3D50;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
