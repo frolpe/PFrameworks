@@ -2,11 +2,13 @@ import { useForm } from 'react-hook-form';
 import { useProject } from '../context/ProjectsContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import "../pages/Studies/stylesStudies.css"
+
 
 function ProjectFormPage() {
 
     const { register, handleSubmit, setValue } = useForm();
-    const {createProject, getProject, updateProject} = useProject();
+    const { createProject, getProject, updateProject } = useProject();
     const navigate = useNavigate();
     const params = useParams();
 
@@ -35,13 +37,15 @@ function ProjectFormPage() {
     })
 
     return (
-        <div>
-            <form onSubmit={onSubmit}>
-                <input type="text" placeholder="Name" {...register("names")} />
-                <textarea rows="3" placeholder="Description" {...register("description")}></textarea>
-                <input type="text" placeholder="link" {...register("link")} />
-                <button>Save</button>
-            </form>
+        <div className='alineStudies'>
+            <div className='contStudies'>
+                <form onSubmit={onSubmit}>
+                    <input className='inputstudy' type="text" placeholder="Name" {...register("names")} />
+                    <textarea className='inputstudy' rows="3" placeholder="Description" {...register("description")}></textarea>
+                    <input className='inputstudy' type="text" placeholder="link" {...register("link")} /> <br />
+                    <button className='btnSave'>Save</button>
+                </form>
+            </div>
         </div>
     )
 }

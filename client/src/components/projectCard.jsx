@@ -1,22 +1,36 @@
 import { useProject } from "../context/ProjectsContext";
 import { Link } from "react-router-dom";
 
-function ProjectCard({project}) {
+function ProjectCard({ project }) {
 
-    const {deleteProject} = useProject();
+    const { deleteProject } = useProject();
 
     return (
-        <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
-            <h1 className="text-white">{project.names}</h1>
+        <div>
+            <h1>{project.names}</h1>
             <p>{project.description}</p>
-            <p>{project.link}</p>
-            <button onClick={() => {
+            <Link>{project.link}</Link><br /><br />
+            <button style={{ 'color': '#000000', 'border': '0', 'background': 'transparent', 'cursor': 'pointer', 'transition': 'color 0.3s ease' }} onClick={() => {
                 deleteProject(project._id);
-            }
-            }>Delete</button>
-            <button>
-                <Link to={`/projects/${project._id}`}>Edit</Link>
+            }}
+                onMouseEnter={(e) => {
+                    e.target.style.color = '#fc5f57';
+                }}
+                onMouseLeave={(e) => {
+                    e.target.style.color = '#000000';
+                }
+                }>Delete</button>
+            <button style={{ 'border': '0', 'background': 'transparent', 'cursor': 'pointer' }}>
+                <Link style={{ 'color': '#000000', 'transition': 'color 0.3s ease' }} to={`/projects/${project._id}`}
+                    onMouseEnter={(e) => {
+                        e.target.style.color = '#586875';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.target.style.color = '#000000';
+                    }
+                    }>Edit</Link>
             </button>
+            <hr />
         </div>
     )
 
