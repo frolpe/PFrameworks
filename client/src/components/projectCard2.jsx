@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 
 function ProjectCard2({project}) {
     return (
-        <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
-            <h1 className="text-white">{project.names}</h1>
-            <p>{project.description}</p>
-            <p>{project.link}</p>
+        <div>
+            <p style={{'fontSize': '20px', 'margin': '2px'}}>{project.names}</p>
+            <hr style={{ flex: '1', margin: '5px 90px', borderColor: '#000000' }} />
         </div>
     )
 

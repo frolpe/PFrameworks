@@ -11,20 +11,29 @@ function ProjectPage() {
     }, [])
 
     if (projects.length == 0) return (
-        <div>
-            <h1>No Projects</h1>
-            <Link to='/add-project'>Agregar</Link>
+        <div className="alineStudies">
+            <div className="contStudies">
+                <h1>No Projects</h1>
+            </div>
+            
+            <div className="btnAgregar">
+                <Link style={{ 'text-decoration': 'none' }}  to='/add-project'>Agregar</Link>
+            </div>
         </div>
     )
 
     return (
-        <div>
-            {
-                projects.map(project => (
-                    <ProjectCard project={project} key={project._id} />
-                ))
-            }
-            <Link to='/add-project'>Agregar</Link>
+        <div className="alineStudies">
+            <div className="contStudies exp">
+                {
+                    projects.map(project => (
+                        <ProjectCard project={project} key={project._id} />
+                    ))
+                }
+            </div>
+            <div className="btnAgregar">
+                <Link style={{ 'text-decoration': 'none' }}  to='/add-project'>Agregar</Link>
+            </div>
         </div>
     )
 }

@@ -7,11 +7,11 @@ function StudyCard({ study }) {
 
     return (
         <div>
-            <div style={{ 'display': 'flex', 'justify-content': 'space-between'}}>
-                <div style={{'padding-left': '2%'}}>
+            <div style={{ 'display': 'flex', 'justify-content': 'space-between' }}>
+                <div style={{ 'padding-left': '2%' }}>
                     <p>{study.names}</p>
                 </div>
-                <div style={{'padding': '18px 18px 0 0', 'display': 'inline-block',}}>
+                <div style={{ 'padding': '18px 18px 0 0', 'display': 'inline-block' }}>
                     <button style={{ 'color': '#000000', 'border': '0', 'background': 'transparent', 'cursor': 'pointer', 'transition': 'color 0.3s ease' }}
                         onClick={() => {
                             deleteStudy(study._id);
@@ -24,7 +24,7 @@ function StudyCard({ study }) {
                         }
                         }>Delete</button>
                     <button style={{ 'border': '0', 'background': 'transparent', 'cursor': 'pointer' }}>
-                        <Link style={{'color': '#000000', 'transition': 'color 0.3s ease' }} to={`/studies/${study._id}`}
+                        <Link style={{ 'color': '#000000', 'transition': 'color 0.3s ease' }} to={`/studies/${study._id}`}
                             onMouseEnter={(e) => {
                                 e.target.style.color = '#586875';
                             }}
@@ -35,7 +35,7 @@ function StudyCard({ study }) {
                     </button>
                 </div>
             </div>
-            <hr style={{ flex: '1', margin: '0 10px', borderColor: '#000000' }} />
+            <hr />
         </div>
     )
 

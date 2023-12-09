@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useStudy } from '../../context/StudyContext'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import "../Studies/stylesStudies.css";
 
 function StudyFormPage() {
 
@@ -31,15 +32,18 @@ function StudyFormPage() {
         }
 
     })
-
     return (
-        <div className='ModalStudies'>
-            <form onSubmit={onSubmit}>
-                <input type="text" placeholder="Name" {...register("names")} />
-                <button>Save</button>
-            </form>
+        <div className='alineStudies'>
+            <div className='contStudies'>
+            <h1>Studies</h1>
+
+                <form onSubmit={onSubmit}>
+                    <input  className='inputstudy' type="text" {...register("names")} />
+                    <button className='btnSave'>Save</button>
+                </form>
+            </div>
         </div>
-    )
+    ) 
 }
 
 export default StudyFormPage;

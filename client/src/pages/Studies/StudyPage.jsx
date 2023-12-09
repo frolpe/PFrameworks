@@ -13,10 +13,15 @@ function StudyPage() {
     }, [])
 
     if (studies.length == 0) return (
-        <div className="contStudies">
-            <p>No Studies</p>
-            <Link to='/add-study'>Agregar</Link>
+        <div className="alineStudies">
+            <div className="contStudies">
+                <p>No Studies</p>
+            </div>
+            <div className="btnAgregar">
+                <Link style={{ 'text-decoration': 'none' }} to='/add-study'>Agregar</Link>
+            </div>
         </div>
+
     )
 
     return (
@@ -27,9 +32,9 @@ function StudyPage() {
                         <StudyCard study={study} key={study._id} />
                     ))
                 }
-                <div className="btnAgregar">
-                    <Link style={{ 'text-decoration': 'none' }} to='/add-study'>Agregar</Link>
-                </div>
+            </div>
+            <div className="btnAgregar">
+                <Link style={{ 'text-decoration': 'none' }} to='/add-study'>Agregar</Link>
             </div>
         </div>
     )
