@@ -10,6 +10,7 @@ import { useStudy } from "../../context/StudyContext";
 import StudyCard2 from "../../components/StudyCard2";
 import { useUser } from "../../context/userContext";
 import perfil from "./Credencial.png";
+import editar from "./Editar.png"
 import "../Profile/stylesProfile.css";
 
 function ProfilePage() {
@@ -131,27 +132,26 @@ function ProfilePage() {
     return (
         <div className="alineProfile">
             <div className="profile">
-                <img src={perfil} alt='Perfil'/>
+                <img src={perfil} alt='Perfil' />
                 <h2>Profile</h2>
                 {userContent}
             </div>
             <div className="cardP">
                 <div className="cardS">
+                    <Link to='/studies'><img src={editar} alt="editar" /></Link>
                     {studyContent}
-                    <Link to='/studies'>Edit Studies</Link>
                 </div>
                 <div className="cardS">
+                    <Link to='/exps'><img src={editar} alt="editar" /></Link>
                     {expContent}
-                    <Link to='/exps'>Edit Experiences</Link>
                 </div>
                 <div className="cardS">
+                    <Link to='/projects'><img src={editar} alt="editar" /></Link>
                     {projectContent}
-                    <Link to='/projects'>Edit Projects</Link>
                 </div>
                 <div className="cardS">
+                    <Link to='/skills'><img src={editar} alt="editar" /></Link>
                     {skillContent}
-                    <Link to='/skills'>Edit Skills</Link>
-
                 </div>
             </div>
         </div>

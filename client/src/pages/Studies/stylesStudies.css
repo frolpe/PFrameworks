@@ -1,4 +1,4 @@
-.contStudies{
+.contStudies {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
     background-color: #e3e5d7;
     border-radius: 20px;
@@ -6,13 +6,45 @@
     width: 60%;
     padding: 20px 5%;
     text-align: center;
-    font-size:larger;
+    font-size: larger;
 }
-.alineStudies{
+
+.alineStudies {
     display: flex;
     justify-content: center;
 }
 
-.btnAgregar{
+.btnAgregar {
     margin: 20px;
+}
+
+.inputstudy {
+    width: 80%;
+    height: 40px;
+    padding: 0 16px;
+    border: 0;
+    background: #b1b2b3;
+    border-radius: 20px;
+    margin: 8px 0;
+    font-family: inherit;
+    text-align: left;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.btnSave {
+    cursor: pointer;
+    width: 10%;
+    padding: 5px;
+    background: #c0c0c0;
+    color: #000000;
+    border: 0;
+    border-radius: 6px;
+    margin-left: 5% ;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+.btnSave:hover{
+    box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.3);
 }

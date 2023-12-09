@@ -39,6 +39,16 @@
     margin-bottom: 20px;
 }
 
+.cardP img{
+    width: 40px;
+    padding: 0 0 0 0;
+    margin: 0;
+    transition: all 0.4s;
+}
+.cardP img:hover{
+    transform: scale(1.1);
+}
+
 .cardS{
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
     background-color: #f6eddc;
