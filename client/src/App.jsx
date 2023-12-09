@@ -16,7 +16,6 @@ import StudyPage from './pages/Studies/StudyPage';
 import StudyFormPage from './pages/Studies/StudyFormPage';
 import { StudyProvider } from './context/StudyContext';
 import { UserProvider } from './context/userContext';
-import HomePage from './pages/HomePage';
 import ProtectedRoute from './ProtectedRoute';
 import Navbar from './components/Navbar';
 import PortafolioPage from './pages/PortafolioPage';
